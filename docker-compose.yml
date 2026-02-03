@@ -51,7 +51,7 @@ services:
     container_name: openguardrails-platform
     restart: unless-stopped
     ports:
-      - "${FRONTEND_PORT:-3000}:80"      # Frontend (Nginx)
+      - "${FRONTEND_PORT:-3080}:80"      # Frontend (Nginx)
       - "${ADMIN_PORT:-5000}:5000"       # Admin Service
       - "${DETECTION_PORT:-5001}:5001"   # Detection Service
       - "${PROXY_PORT:-5002}:5002"       # Proxy Service
@@ -80,12 +80,12 @@ services:
       - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
 
       # Administrator configuration
-      - SUPER_ADMIN_USERNAME=${SUPER_ADMIN_USERNAME:-admin@yourdomain.com}
-      - SUPER_ADMIN_PASSWORD=${SUPER_ADMIN_PASSWORD:-CHANGE-THIS-PASSWORD-IN-PRODUCTION}
+      - SUPER_ADMIN_USERNAME=${SUPER_ADMIN_USERNAME:-neuronlabpro@gmail.com}
+      - SUPER_ADMIN_PASSWORD=${SUPER_ADMIN_PASSWORD:-Cangetin2028@}
 
       # Default language configuration (for offline deployments)
       # Options: 'en' (English) or 'zh' (Chinese)
-      - DEFAULT_LANGUAGE=${DEFAULT_LANGUAGE:-en}
+      - DEFAULT_LANGUAGE=${DEFAULT_LANGUAGE:-es}
 
       # Model API configuration (OpenGuardrails Text Model)
       # Configure to point to your deployed vLLM text model service
